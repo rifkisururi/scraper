@@ -2,9 +2,11 @@ const express = require('express');
 const axios = require('axios');
 const FormData = require('form-data');
 const cheerio = require('cheerio');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT ||3000;
 
 app.get('/cekporsihaji', async (req, res) => {
   try {
